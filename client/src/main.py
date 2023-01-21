@@ -7,14 +7,17 @@ from weather import get_weather_image
 from img import random_image
 
 def _set_image(fun):
-    set_screen(fun)
-    if on_pi():
-        time.sleep(60*2)
-    else:
-        time.sleep(10)
+    try:
+        set_screen(fun)
+        if on_pi():
+            time.sleep(60*2)
+        else:
+            time.sleep(10)
+    except:
+        print("error")
 
 
 while True:
-    _set_image(random_image)
     _set_image(get_weather_image)
+    _set_image(set_texttv)
     _set_image(set_texttv)
