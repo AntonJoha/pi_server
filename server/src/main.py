@@ -61,7 +61,15 @@ def get_image():
 
 @app.post("/image")
 def post_image():
-    return image(request)
+    image(request)
+
+    data = ""
+    with open('image.html', 'r') as file:
+        data = file.read().replace('\n', '')
+
+    return data
+
+
 
 
 @app.post("/info")

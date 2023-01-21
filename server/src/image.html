@@ -2,10 +2,33 @@
 <head>  
     <title>upload the file : GFG</title>  
 </head>  
+<style>
+body {
+	text-align: center;
+}
+#in{
+	font-size: 60px;
+}
+#sub{
+	display: none;
+	font-size: 100px;
+	margin-top: 25px;
+	border-radius: 25px;
+	background-color: cornsilk;
+}
+</style>
+<script>
+function show() {
+	var x = document.getElementById("sub");
+	x.style.display = "inline";
+
+}
+</script>
 <body>  
     <form action = "/image" method = "post" enctype="multipart/form-data">  
-        <input type="file" name="file" />  
-        <input type = "submit" value="Upload">  
+        <input id="in" type="file" name="file" onclick="show()" accept=".jpeg, .jpg, .png"/>  
+	<br>
+        <input type = "submit" value="Upload" id="sub" >  
     </form>  
 </body>  
 </html>
