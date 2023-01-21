@@ -1,0 +1,11 @@
+command=cal
+x=0
+y=0
+width=600
+height=400
+[new]
+command=bash cowfortune
+x=0
+y=200
+width=600
+height=100
